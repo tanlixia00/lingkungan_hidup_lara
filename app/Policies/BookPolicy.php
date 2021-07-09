@@ -29,11 +29,11 @@ class BookPolicy
             : Response::deny('anda harus jadi admin atau karyawan untuk mengakses ini'));
     }
 
-    public function delete(User $user){
+    public function admin(User $user){
         //fitur manajemen buku (backend), bagian delete
         //hanya bisa diakses oleh admin saja
         //juga diimplementasikan untuk category
-        return ($user->role=='admin'
+        return ($user->hakakses=='admin'
             ? Response::allow()
             : Response::deny('anda harus jadi admin atau karyawan untuk melakukan ini'));
     }

@@ -44,3 +44,4 @@ Route::get('/lokasi', 'FrontEndController@lihatLokasi');
 Route::get('/satwadetail{id}', 'FrontEndController@satwadetail');
 Route::get('/backend', 'BackEndController@index');
 Route::get('/cek_pengaduan', 'BackEndController@cek_pengaduan');
+Route::get('/destroy_pengaduan{id}', 'BackEndController@destroyPengaduan');

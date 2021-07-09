@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 
-@section('title', 'Daftar Satwa')
+@section('title', 'Daftar')
 
 @section('content')
 

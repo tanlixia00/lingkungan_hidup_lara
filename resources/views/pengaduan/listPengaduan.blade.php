@@ -1,5 +1,8 @@
 @extends('layouts.backend')
 
+@section('title', 'Daftar Pengaduan')
+
+
 @section('content')
 
     @if (session('status'))
@@ -42,7 +45,7 @@
                                 </td>
                             
                                 <!-- <td class="actions" data-th="">
-                                <form method='POST' action="{{url('satwa/'.$t->idSatwa )}}" >
+                                <form method='POST' action="{{url('frontend/'.$t->id )}}" >
                                 @csrf
                                 @method('DELETE')
                                 <input type='submit' value='hapus' class='btn btn-xs btn-danger'

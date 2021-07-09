@@ -106,6 +106,11 @@ class BackEndController extends Controller
         }
     }
 
+    public function destroyPengaduan(Pengaduan $pengaduan)
+    {
+        
+    }
+
     public function cek_pengaduan()
     {
         $query = Pengaduan::all();

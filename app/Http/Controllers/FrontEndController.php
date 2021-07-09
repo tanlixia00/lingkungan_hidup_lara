@@ -96,9 +96,16 @@ class FrontEndController extends Controller
      * @param  \App\Satwa  $satwa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Satwa $satwa)
+    public function destroy(Pengaduan $pengaduan)
     {
-        //
+        try {
+            $pengaduan->delete();
+            return redirect()->route('satwa.index')->with('status','Data Pengaduan berhasil dihapus');
+        } catch (\PDOException $e) {
+            $msg="Data Gagal dihapus. Data pengaduan digunakan pada field lain";
+            return redirect()->route('satwa.index')->with('status',
+                $msg);
+        }
     }
 
     public function satwadetail($id)
@@ -107,7 +114,6 @@ class FrontEndController extends Controller
         $query = Satwa::find($id);
         $data = $query;
         return view('frontend.detail', compact('data'));
-
     }
     
     public function pengaduan()

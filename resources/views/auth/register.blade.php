@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="sebagai" class="col-md-4 col-form-label text-md-right">{{ __('Register as') }}</label>
 
                             <div class="col-md-6">
@@ -47,10 +47,9 @@
                                 <label for="owner">Admin</label><br>
                                 <input type="radio" id='karyawan' name='roles' value="karyawan">
                                 <label for="employee">karyawan</label> <br>
-                                <!-- <input type="radio" id='member' name='roles' value="member">
-                                <label for="employee">Member</label> -->
+                                
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

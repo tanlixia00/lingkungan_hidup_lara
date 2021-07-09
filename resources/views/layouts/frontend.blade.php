@@ -40,7 +40,11 @@
                     <ul class="navbar-nav mr-auto">
                          <a class="nav-link" href="{{ url('/lokasi') }}">Lokasi Wisata</a>
                         <a class="nav-link" href="{{ url('/pengaduan') }}">Pengaduan</a>
-                        <a class="nav-link" href="{{ url('/backend') }}">backend</a>
+
+                        @if( Auth::check() && Auth::user()->getRole() == "admin")
+                            <a class="nav-link" href="{{ url('/backend') }}">ADMIN</a>
+                        @endif 
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
