@@ -42,6 +42,6 @@ class User extends Authenticatable
 
     public function getRole()
     {
-    return $this->hakakses;
+        return $this->hakakses;
     }
 }

@@ -9,6 +9,7 @@
     <!-- <h5>adakjsdhkjasd hsdadha djashdlas dasjdlas</h5> -->
     <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum fugiat aliquid, sed ut officiis voluptas, facilis quod sapiente pariatur soluta tempora officia distinctio. Qui deserunt, tenetur delectus doloribus eaque natus?</p> -->
     <!-- nama, stok, harga jual, harga produksi -->
+    <br>
     @if (session('status'))
         <div class="alert alert-success" role="alert">
             {{ session('status') }}

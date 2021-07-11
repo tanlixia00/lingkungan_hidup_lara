@@ -42,7 +42,7 @@ class BackEndController extends Controller
         $data->spesies=$request->get('spesies');
         $data->asal=$request->get('asal');
         $data->deskripsi=$request->get('deskripsi');
-        $fileName =  "satwa".rand(1,1000).".jpg";
+        $fileName =  "satwa".rand(1,10).rand(500,1000).".jpg";
         $data->gambar=$fileName;
         $data->save();
 
@@ -104,11 +104,6 @@ class BackEndController extends Controller
             return redirect()->route('satwa.index')->with('status',
                 $msg);
         }
-    }
-
-    public function destroyPengaduan(Pengaduan $pengaduan)
-    {
-        
     }
 
     public function cek_pengaduan()

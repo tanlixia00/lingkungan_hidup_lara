@@ -118,13 +118,12 @@ class FrontEndController extends Controller
     
     public function pengaduan()
     {
-        return view('pengaduan.create');
+        return view('pengaduan.create'); //buat pengaduan baru
     }
 
     public function lihatLokasi()
     {
         $query = LokasiWisata::all();
-
         return view('lokasi_wisata.index', compact('query'));
     }
 }

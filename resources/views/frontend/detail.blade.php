@@ -19,7 +19,7 @@
                     <label>Nama Satwa</label>
                     <input type="text" class="form-control" name="namaSatwa" id="namaSatwa" placeholder="" value="{{$data->nama}}">
                     <span class="help-block">
-                    berisi nama satwa </span>
+                     </span>
                 </div>
                 
                 
