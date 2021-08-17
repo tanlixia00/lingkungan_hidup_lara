@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <a class="nav-link" href="{{ url('/lokasi') }}">Lokasi Wisata</a>
+                        <a class="nav-link" href="{{ url('/lokasi') }}">Lokasi Konservasi</a>
                         <a class="nav-link" href="{{ url('/pengaduan') }}">Pengaduan</a>
 
                         @if( Auth::check() && Auth::user()->getRole() == "admin")

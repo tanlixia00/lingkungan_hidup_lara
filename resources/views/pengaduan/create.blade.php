@@ -8,7 +8,7 @@
     <h3>Pojok Pengaduan</h3> <br>
     <!-- <h5>adakjsdhkjasd hsdadha djashdlas dasjdlas</h5> -->
     <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum fugiat aliquid, sed ut officiis voluptas, facilis quod sapiente pariatur soluta tempora officia distinctio. Qui deserunt, tenetur delectus doloribus eaque natus?</p> -->
-    <!-- nama, stok, harga jual, harga produksi -->
+    
     <br>
     @if (session('status'))
         <div class="alert alert-success" role="alert">
@@ -24,7 +24,7 @@
                     <label>Lokasi Satwa</label>
                     <input type="text" class="form-control" name="lokasi_satwa" id="lokasi_satwa" placeholder="">
                     <span class="help-block">
-                    berisi lokasi satwa </span>
+                    berisi alamat ditemukannya satwa </span>
                 </div>
                 
                 <div class="form-group">

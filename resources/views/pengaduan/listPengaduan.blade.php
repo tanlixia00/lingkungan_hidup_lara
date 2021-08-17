@@ -12,7 +12,7 @@
     @endif
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-13">
             <div class="card">
                 <div class="card-header">Daftar Pengaduan</div>
 
@@ -22,9 +22,12 @@
                         <thead>
                         <tr>
                             <!-- <th style="width:5%">ID</th> -->
-                            <th style="width:30%">gambar</th>
-                            <th style="width:45%">alasan</th>
+                            <th style="width:20%">gambar</th>
+                            <th style="width:25%">alasan</th>
                             <th style="width:20%">lokasi</th>
+                            <th style="width:10%">tanggal</th>
+                            <th style="width:10%">telp</th>
+                            <th style="width:10%">status</th>
                             
                         </tr>
                         </thead>
@@ -36,12 +39,23 @@
                                 </td> -->
                                 <td data-th="Kategori">
                                 <img src="{{ asset('images/'.$t->gambar) }}" width="250" height="250">
+                                <img src="{{ $t->gambar }}" width="250" height="250">
                                 </td>
                                 <td data-th="Kode">
                                    {{ $t->alasan }}
                                 </td>
-                                <td data-th="Kategori">
+                                <td data-th="">
                                     {{ $t->lokasi_satwa }}
+                                </td>
+                                <td data-th="tanggal">
+                                    {{ $t->tanggal }}
+                                </td>
+                                <td data-th="tanggal">
+                                    {{ $t->telepon }}
+                                </td>
+                                <td>
+                                {{ $t->status }}
+
                                 </td>
                             
                                 <!-- <td class="actions" data-th="">

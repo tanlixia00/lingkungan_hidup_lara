@@ -16,7 +16,8 @@
             @foreach($query as $product)
                 <div class="col-xs-18 col-sm-6 col-md-3">
                     <div class="thumbnail">
-                        <img src="{{ asset('images/'.$product->gambar) }}" width="500" height="250">
+                        <!-- <img src="{{ asset('images/'.$product->gambar) }}" width="500" height="250"> -->
+                        <img src="{{$product->gambar}}" width="250" height="250">    
                         <div class="caption">
                             <h5>{{ Str::limit($product->nama, 20) }}</h5>
                             <p>{{ Str::limit(strtolower($product->spesies), 50) }}</p>

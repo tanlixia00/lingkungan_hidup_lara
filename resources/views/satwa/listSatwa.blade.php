@@ -36,7 +36,8 @@
                                    {{ $t->idSatwa }}
                                 </td>
                                 <td data-th="Kategori">
-                                <img src="{{ asset('images/'.$t->gambar) }}" width="250" height="250">
+                                <!-- <img src="{{ asset('images/'.$t->gambar) }}" width="250" height="250"> -->
+                                <img src="{{$t->gambar}}" width="250" height="250">    
                                 </td>
                                 <td data-th="Kode">
                                    {{ $t->nama }}

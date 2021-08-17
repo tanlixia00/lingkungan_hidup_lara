@@ -5,9 +5,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Daftar Lokasi Wisata Satwa</div>
+                <div class="card-header">Lokasi Konservasi</div>
                 
                 <div class="card-body">
 
@@ -17,7 +17,8 @@
                         <tr>
                             <th style="width:10%">Kode</th>
                             <th style="width:20%">Nama Lokasi</th>
-                            <th style="width:70%">Alamat Lengkap</th>
+                            <th style="width:60%">Alamat Lengkap</th>
+                            <th style="width:10%">Link</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -31,6 +32,10 @@
                                 </td>
                                 <td data-th="Kategori">
                                     {{ $t->alamat }}
+                                </td>
+                                <td>
+                                    <a href="{{ $t->link }}">maps</a>
+                                <!-- <input type='submit' value='hapus' class='btn btn-xs btn-danger'/> -->
                                 </td>
                                 
                             
