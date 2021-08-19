@@ -42,15 +42,20 @@ class BackEndController extends Controller
         $data->spesies=$request->get('spesies');
         $data->asal=$request->get('asal');
         $data->deskripsi=$request->get('deskripsi');
-        $fileName =  "satwa".rand(1,10).rand(500,1000).".jpg";
-        $data->gambar=$fileName;
+        $data->gambar=$request->get('url');
+
+//upload
+        // $fileName =  "satwa".rand(1,10).rand(500,1000).".jpg";
+        // $data->gambar=$fileName;
         $data->save();
 
-        $destinationPath =  "images/";
+        // $destinationPath =  "images/";
 
-        if ($request->hasFile('image_upload')) {
-            $request->image_upload->move($destinationPath, $fileName);
-        }
+        // if ($request->hasFile('image_upload')) {
+        //     $request->image_upload->move($destinationPath, $fileName);
+        // }
+
+
         return redirect()->route('frontend.index')->with('status','Data satwa berhasil ditambahkan');
     }
 
@@ -110,5 +115,20 @@ class BackEndController extends Controller
     {
         $query = Pengaduan::all();
         return view('pengaduan.listPengaduan', compact('query'));
+    }
+
+    public function proses_pengaduan(int $id)
+    {
+
+        try {
+            Pengaduan::where('id',$id)->update(array(
+                'status'=>"ok"
+            ));
+            return redirect()->route('satwa.index')->with('status','Data Pengaduan berhasil diproses');
+        } catch (\PDOException $e) {
+            $msg="Data Gagal dihapus.";
+            return redirect()->route('satwa.index')->with('status',
+                $msg);
+        }
     }
 }

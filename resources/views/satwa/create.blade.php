@@ -42,12 +42,19 @@
                     <label>Deskripsi</label> <br>
                     <textarea name="deskripsi" id="deskripsi" cols="140" rows="5" value=""></textarea>
                 </div>
-                
+
                 <div class="form-group">
+                    <label>URL gambar</label>
+                    <input type="text" class="form-control" name="url" id="url" placeholder="">
+                    <span class="help-block">
+                    berisi URL gambar satwa </span>
+                </div>
+                
+                <!-- <div class="form-group">
                     <label for="inputfile">Gambar Satwa</label>
                     <input type="file" id="image_upload" name="image_upload">
                     
-                </div>
+                </div> -->
                 
             </div>
             <div class="form-actions">

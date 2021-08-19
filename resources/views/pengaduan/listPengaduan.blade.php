@@ -38,7 +38,7 @@
                                    {{ $t->id }}
                                 </td> -->
                                 <td data-th="Kategori">
-                                <img src="{{ asset('images/'.$t->gambar) }}" width="250" height="250">
+                                <!-- <img src="{{ asset('images/'.$t->gambar) }}" width="250" height="250"> -->
                                 <img src="{{ $t->gambar }}" width="250" height="250">
                                 </td>
                                 <td data-th="Kode">
@@ -54,18 +54,25 @@
                                     {{ $t->telepon }}
                                 </td>
                                 <td>
-                                {{ $t->status }}
+                                    @if ($t->status == "ok")
+                                        {{ $t->status }}
+                                    @else
+                                    <p class="btn-holder"><a href="{{ url('/proses_pengaduan'.$t->id) }}" 
+                               class="btn btn-xs btn-primary" role="button">proses</a> </p>
+
+                                    <!-- <form method='POST' action="{{url('proses_pengaduan/'.$t->id )}}" >
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type='submit' value='selesai' class='btn btn-xs btn-primary'
+                                        onclick="if(!confirm('apakah anda yakin?')) return false;"/>
+                                    </form> -->
+                                        
+                                    @endif
+                                
 
                                 </td>
                             
-                                <!-- <td class="actions" data-th="">
-                                <form method='POST' action="{{url('frontend/'.$t->id )}}" >
-                                @csrf
-                                @method('DELETE')
-                                <input type='submit' value='hapus' class='btn btn-xs btn-danger'
-                                    onclick="if(!confirm('apakah anda yakin?')) return false;"/>
-                                </form>
-                                </td> -->
+                                
                             
                                 
                             </tr>

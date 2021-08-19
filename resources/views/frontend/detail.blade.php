@@ -13,7 +13,8 @@
             <div class="form-body">
                 <div>
                     <!-- <label for="inputfile">Gambar Satwa</label> <br> -->
-                    <img src="{{ asset('images/'.$data->gambar) }}" alt="Current image" height="300" width="300" >
+                    <!-- <img src="{{ asset('images/'.$data->gambar) }}" alt="Current image" height="300" width="300" > -->
+                    <img src="{{ $data->gambar }}" alt="Current image" height="300" width="300" >
                     <br>
                 </div>
                 <br>
