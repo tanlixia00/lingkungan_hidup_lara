@@ -26,6 +26,7 @@ Route::resource('satwa', 'BackEndController');
 Route::get('/pengaduan', 'FrontEndController@pengaduan');
 Route::get('/lokasi', 'FrontEndController@lihatLokasi');
 Route::get('/satwadetail{id}', 'FrontEndController@satwadetail');
+Route::get('/satwaEditdetail{id}', 'BackEndController@satwaEditdetail');
 Route::get('/backend', 'BackEndController@index');
 Route::get('/cek_pengaduan', 'BackEndController@cek_pengaduan');
 Route::get('/proses_pengaduan{id}', 'BackEndController@proses_pengaduan');

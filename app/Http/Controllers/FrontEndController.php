@@ -43,15 +43,19 @@ class FrontEndController extends Controller
         $data = new Pengaduan();
         $data->alasan=$request->get('alasan');
         $data->lokasi_satwa=$request->get('lokasi_satwa');
-        $fileName =  "gambar".rand(10,100).".jpg";
-        $data->gambar=$fileName;
+        $data->telepon=$request->get('telepon');
+        $data->gambar=$request->get('image_upload');
+
+        // $fileName =  "gambar".rand(10,100).".jpg";
+        // $data->gambar=$fileName;
+
         $data->save();
 
-        $destinationPath =  "images/";
+        // $destinationPath =  "images/";
 
-        if ($request->hasFile('image_upload')) {
-            $request->image_upload->move($destinationPath, $fileName);
-        }
+        // if ($request->hasFile('image_upload')) {
+        //     $request->image_upload->move($destinationPath, $fileName);
+        // }
         return redirect()->route('frontend.index')->with('status','Pengaduan satwa berhasil dibuat');
     }
 
@@ -126,4 +130,7 @@ class FrontEndController extends Controller
         $query = LokasiWisata::all();
         return view('lokasi_wisata.index', compact('query'));
     }
+    //
+
+    
 }

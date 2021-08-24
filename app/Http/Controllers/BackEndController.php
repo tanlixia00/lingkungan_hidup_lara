@@ -38,10 +38,10 @@ class BackEndController extends Controller
     public function store(Request $request)
     {
         $data = new Satwa();
-        $data->nama=$request->get('nama');
-        $data->spesies=$request->get('spesies');
-        $data->asal=$request->get('asal');
-        $data->deskripsi=$request->get('deskripsi');
+        $data->nama = $request->get('nama');
+        $data->spesies = $request->get('spesies');
+        $data->asal = $request->get('asal');
+        $data->deskripsi = $request->get('deskripsi');
         $data->gambar=$request->get('url');
 
 //upload
@@ -90,7 +90,14 @@ class BackEndController extends Controller
      */
     public function update(Request $request, Satwa $satwa)
     {
-        //
+        // $data->idSatwa=$request->get('idSatwa');
+        $satwa->nama=$request->get('nama');
+        $satwa->spesies=$request->get('spesies');
+        $satwa->asal=$request->get('asal');
+        $satwa->deskripsi=$request->get('desc');
+        $satwa->gambar=$request->get('url');
+        $satwa->save();
+        return redirect()->route('frontend.index')->with('status','Data satwa berhasil diedit');;
     }
 
     /**
@@ -130,5 +137,13 @@ class BackEndController extends Controller
             return redirect()->route('satwa.index')->with('status',
                 $msg);
         }
+    }
+
+    public function satwaEditdetail($id)
+    {
+        //show detail satwa
+        $query = Satwa::find($id);
+        $data = $query;
+        return view('satwa.edit', compact('data'));
     }
 }

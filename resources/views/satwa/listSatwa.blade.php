@@ -60,6 +60,9 @@
                                 @method('DELETE')
                                 <input type='submit' value='hapus' class='btn btn-xs btn-danger'
                                     onclick="if(!confirm('apakah anda yakin?')) return false;"/>
+                                
+                                <p class="btn-holder"><a href="{{ url('/satwaEditdetail'.$t->idSatwa) }}" 
+                                class="btn btn-warning btn-block text-center btn-disable" role="button">Edit</a> </p>
                                 </form>
                                 </td>
                             

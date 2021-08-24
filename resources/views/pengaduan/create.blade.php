@@ -36,11 +36,26 @@
                     <label>Alasan</label> <br>
                     <textarea name="alasan" id="alasan" cols="140" rows="5" value=""></textarea>
                 </div>
+
                 <div class="form-group">
+                    <label>Telepon</label>
+                    <input type="number" class="form-control" name="telepon" id="telepon" placeholder="">
+                    <span class="help-block">
+                    berisi nomor telp pelapor yang bisa dihubungi </span>
+                </div>
+
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" class="form-control" name="image_upload" id="image_upload" placeholder="">
+                    <span class="help-block">
+                    berisi URL gambar satwa </span>
+                </div>
+
+                <!-- <div class="form-group">
                     <label for="inputfile">Gambar Satwa</label>
                     <input type="file" id="image_upload" name="image_upload">
                     
-                </div>
+                </div> -->
                 
             </div>
             <div class="form-actions">
